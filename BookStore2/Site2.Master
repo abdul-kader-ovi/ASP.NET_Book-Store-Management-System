@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="BookStore2.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            
+        }
+
+        .auto-style3 {
+            background-color: brown;
+            width: 1066px;
+            height:451px;
+        }
+
+        .auto-style5 {
+            text-align: center;
+            background-color: black;
+            width: 1247px;
+            height: 49px;
+            
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+
+        .auto-style6 {
+            width: 174px;
+        }
+
+        .auto-style7 {
+            width: 177px;
+        }
+
+        .auto-style8 {
+            width: 147px;
+        }
+
+        .auto-style9 {
+            height: 451px;
+            width: 181px;
+        }
+
+        .auto-style10 {
+            width: 176px;
+            height: 57px;
+        }
+
+        .auto-style11 {
+            height: 20px;
+            background-color:burlywood;
+            width:1247px;
+        }
+        header{
+           
+        }
+        
+        .auto-style12 {
+            text-align: center;
+            background-color: black;
+            width: 1247px;
+            height: 49px;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style5">
+
+            <header class="auto-style12">              
+                   <asp:LinkButton ID="LinkButton1" runat="server" align="right" OnClick="LinkButton1_Click"><span style="color:white; float:right">LinkButton</span></asp:LinkButton>
+            </header>
+
+        </div>
+        <div>
+
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style9">
+                        <ul class="auto-style9">
+                            <li class="auto-style6"><a href="Home">Home</a></li>
+                            <li class="auto-style7"><a href="ObjCrud">Object CRUD</a></li>
+                            <li class="auto-style7"><a href="SqlCrud">SQL CRUD</a></li>
+                            <li><a href="EFCRUD" class="auto-style8">EFCRUD</a></li>
+                            <li class="auto-style7"><a href="DataView">DataView</a></li>
+                            <li class="auto-style10"><a>
+                                <asp:LinkButton ID="btnReport" runat="server" OnClick="btnReport_Click" Height="16px" Width="118px">View Report</asp:LinkButton></a></li>
+
+                            <%-- <li><a href="Register">Register</a></li>
+                <li><a href="Login">Login</a></li>--%>
+                        </ul>
+
+                    </td>
+                    <td class="auto-style3">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                </table>
+
+        </div>
+        <div class="auto-style11">
+            Copyright info
+        </div>
+    </form>
+</body>
+</html>

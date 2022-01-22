@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BookStore2.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="CSS/myStyle.css" rel="stylesheet" />
+    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            
+        }
+
+        li {
+            float: left;
+        }
+
+         li a {
+               display: block;
+               color: white;
+               text-align: center;
+               padding: 14px 16px;
+               text-decoration: none;
+         }
+
+          li a:hover {
+                background-color: #111;
+          }
+          
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <%--<header>
+                <img src="App_Image/BANNER-Books-V2.jpg" style="float:left;width:1500px;height:100px";/>
+            </header>--%>
+
+            <ul>
+                <li><a href="Home">Home</a></li>
+                <li><a href="ObjCrud">Object CRUD</a></li>
+                <li><a href="SqlCrud">SQL CRUD</a></li>                
+                <li><a href="EFCRUD">EFCRUD</a></li>
+                <li><a href="DataView">DataView</a></li>
+                <li><asp:LinkButton ID="btnReport" CausesValidation="false" runat="server" OnClick="btnReport_Click" >View Report</asp:LinkButton></li>                              
+            </ul>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
